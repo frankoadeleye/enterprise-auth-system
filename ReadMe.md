@@ -1,3 +1,9 @@
+![React](https://img.shields.io/badge/React-19-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![Node.js](https://img.shields.io/badge/Node.js-22-green)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-green)
+![License](https://img.shields.io/badge/License-MIT-yellow)
+
 # Enterprise Auth System
 
 Production-ready authentication system built with React, TypeScript, Node.js, Express, MongoDB, JWT, Zustand, React Hook Form, Zod, and Mailtrap.
