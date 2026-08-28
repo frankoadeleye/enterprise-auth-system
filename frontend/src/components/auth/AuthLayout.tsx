@@ -14,7 +14,7 @@ function AuthLayout({ children, title, subtitle }: AuthLayoutProps) {
     <>
       <Navbar />
 
-      <section className="py-12">
+      <section className="py-6">
         <Container>
           <div className="mx-auto max-w-md">
             <div className="card bg-base-100 border border-base-300 rounded-2xl shadow-sm">

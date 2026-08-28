@@ -21,10 +21,10 @@ The project was built as a portfolio case study focused on authentication archit
 ## Live Demo
 
 Frontend:
-[Add Deployment URL]
+[\[Live Live\]](https://enterprise-auth-system-3y2i.onrender.com/)
 
 Backend API:
-[Add API URL]
+[\[Backend API\]](https://enterprise-auth-system-3y2i.onrender.com/api)
 
 ---
 
@@ -32,23 +32,39 @@ Backend API:
 
 ### Signup
 
-(Add screenshot)
+![Signup Page Light Mode](./screenshots/signup-a.png)
+![Signup Page Dark Mode](./screenshots/signup-b.png)
 
 ### Login
 
-(Add screenshot)
+![Login Page](./screenshots/login-a.png)
+![Login Page](./screenshots/login-b.png)
 
 ### Email Verification
 
-(Add screenshot)
+![Email Verification Page](./screenshots/verify-email-a.png)
+![Email Verification Page](./screenshots/verify-email-b.png)
+![Email Verification Page](./screenshots/verify-email-c.png)
+![Email Verification Page](./screenshots/verify-email-d.png)
 
 ### Forgot Password
 
-(Add screenshot)
+![Forgot Password Page](./screenshots/forgot-password-a.png)
+![Forgot Password Page](./screenshots/forgot-password-b.png)
 
 ### Reset Password
 
-(Add screenshot)
+![Reset Password Page](./screenshots/reset-password.png)
+
+### Dashboard
+
+![Dashboard Page](./screenshots/dashboard-a.png)
+![Dashboard Page](./screenshots/dashboard-b.png)
+
+### Homepage
+
+![Home Page](./screenshots/home-page-a.png)
+![Home Page](./screenshots/home-page-b.png)
 
 ---
 
@@ -384,7 +400,7 @@ The system was tested against both standard and edge-case scenarios.
 ## Clone Repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/frankoadeleye/enterprise-auth-system
 ```
 
 ## Install Dependencies

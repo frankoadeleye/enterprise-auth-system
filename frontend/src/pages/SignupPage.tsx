@@ -63,7 +63,7 @@ function SignupPage() {
       title="Create Account"
       subtitle="Start preserving your memories today."
     >
-      <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-4">
+      <form onSubmit={handleSubmit(onSubmit)} className="mt-0 space-y-4">
         <FormField
           label="Full Name"
           type="text"
