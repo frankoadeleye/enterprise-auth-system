@@ -1,30 +1,37 @@
-# Enterprise Authentication System (EAS)
+# Enterprise Auth System
 
-A production-style full-stack authentication system built with the MERN stack.
+Production-ready authentication system built with React, TypeScript, Node.js, Express, MongoDB, JWT, Zustand, React Hook Form, Zod, and Mailtrap.
 
-This project demonstrates how modern applications handle:
+## 🔗 Live Demo
 
-- User registration
-- Email verification
-- Secure login
-- JWT authentication
-- Protected routes
-- Password reset workflows
-- Email delivery
-- Session persistence
+[\[View Live\]](https://enterprise-auth-system-3y2i.onrender.com/)
+
+## ⭐ Support
+
+If you found this project helpful:
+
+- ⭐ Star the repository
+- 🍴 Fork the repository
+- 🐛 Report issues
+- 💡 Suggest improvements
+
+## ✨ Features
+
+- User Registration
+- Email Verification
+- Login / Logout
+- Protected Routes
+- Guest Routes
+- Session Persistence
+- Password Reset
+- Password Strength Validation
+- JWT Authentication
+- Secure HTTP-Only Cookies
+- Error Classification
+- Production Deployment
 - Authentication security best practices
 
 The project was built as a portfolio case study focused on authentication architecture rather than business-specific features.
-
----
-
-## Live Demo
-
-Frontend:
-[\[Live Live\]](https://enterprise-auth-system-3y2i.onrender.com/)
-
-Backend API:
-[\[Backend API\]](https://enterprise-auth-system-3y2i.onrender.com/api)
 
 ---
 
