@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+:root {
+  --eas-link-color: var(--color-primary-text);
+}
+
+@plugin "daisyui/theme" {
+  name: "eas-light";
+  default: true;
+  prefersdark: false;
+
+  --color-primary: #fee502;
+  --color-primary-content: #2b2119;
+  --color-primary-text: #9a7a00;
+  --color-secondary: #6fa626;
+  --color-accent: #df7332;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f8f8f8;
+  --color-base-300: #ececec;
+  --color-base-content: #2b2119;
+
+  --color-neutral: #715844;
+
+  --color-info: #6fa626;
+  --color-success: #6fa626;
+  --color-warning: #fee502;
+  --color-error: #df7332;
+}
+
+@plugin "daisyui/theme" {
+  name: "eas-dark";
+  prefersdark: true;
+
+  --color-primary: #fee502;
+  --color-primary-content: #2b2119;
+  --color-primary-text: #fee502;
+  --color-secondary: #6fa626;
+  --color-accent: #df7332;
+
+  --color-base-100: #2b2119;
+  --color-base-200: #3a2d23;
+  --color-base-300: #4b3a2d;
+  --color-base-content: #ffffff;
+
+  --color-neutral: #715844;
+
+  --color-info: #6fa626;
+  --color-success: #6fa626;
+  --color-warning: #fee502;
+  --color-error: #df7332;
+}
+
+.input:focus,
+.select:focus,
+.textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px
+    color-mix(in srgb, var(--color-primary) 30%, transparent);
+}
