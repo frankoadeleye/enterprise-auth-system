@@ -1,7 +1,7 @@
 import AuthLayout from "@/components/auth/AuthLayout";
 import FormField from "@/components/ui/FormField";
 import LoadingButton from "@/components/ui/LoadingButton";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import {
   resetPasswordSchema,
@@ -19,9 +19,20 @@ function ResetPasswordPage() {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors, isSubmitting },
   } = useForm<ResetPasswordFormData>({
     resolver: zodResolver(resetPasswordSchema),
+  });
+
+  const password = useWatch({
+    control,
+    name: "password",
+  });
+
+  const confirmPassword = useWatch({
+    control,
+    name: "confirmPassword",
   });
 
   const navigate = useNavigate();
@@ -68,7 +79,11 @@ function ResetPasswordPage() {
 
         {authError && <AuthErrorAlert message={authError} type={errorType} />}
 
-        <LoadingButton type="submit" isLoading={isSubmitting || isLoading}>
+        <LoadingButton
+          type="submit"
+          isLoading={isSubmitting || isLoading}
+          disabled={!password?.trim() || !confirmPassword?.trim()}
+        >
           Reset Password
         </LoadingButton>
       </form>

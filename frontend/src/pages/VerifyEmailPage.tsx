@@ -1,5 +1,5 @@
 import { useSearchParams, useNavigate } from "react-router";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 
 import AuthLayout from "@/components/auth/AuthLayout";
 import LoadingButton from "@/components/ui/LoadingButton";
@@ -40,11 +40,17 @@ function VerifyEmailPage() {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm<VerifyEmailFormData>({
     defaultValues: {
       code: "",
     },
+  });
+
+  const code = useWatch({
+    control,
+    name: "code",
   });
 
   useEffect(() => {
@@ -131,7 +137,7 @@ function VerifyEmailPage() {
 
         {authError && <AuthErrorAlert message={authError} type={errorType} />}
 
-        <LoadingButton type="submit" isLoading={isLoading}>
+        <LoadingButton type="submit" disabled={code?.trim().length !== 6}>
           Verify Email
         </LoadingButton>
 

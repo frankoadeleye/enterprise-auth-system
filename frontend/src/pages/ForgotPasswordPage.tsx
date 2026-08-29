@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
+import { useForm, useWatch } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 
 import AuthLayout from "@/components/auth/AuthLayout";
@@ -26,9 +26,15 @@ function ForgotPasswordPage() {
   const {
     register,
     handleSubmit,
+    control,
     formState: { errors },
   } = useForm<ForgotPasswordFormData>({
     resolver: zodResolver(forgotPasswordSchema),
+  });
+
+  const email = useWatch({
+    control,
+    name: "email",
   });
 
   const forgotPassword = useAuthStore((state) => state.forgotPassword);
@@ -69,7 +75,11 @@ function ForgotPasswordPage() {
 
           {authError && <AuthErrorAlert message={authError} type={errorType} />}
 
-          <LoadingButton type="submit" isLoading={isLoading}>
+          <LoadingButton
+            type="submit"
+            isLoading={isLoading}
+            disabled={!email?.trim()}
+          >
             Send Reset Link
           </LoadingButton>
         </form>
