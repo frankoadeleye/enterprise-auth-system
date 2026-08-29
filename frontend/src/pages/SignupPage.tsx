@@ -59,10 +59,7 @@ function SignupPage() {
   };
 
   return (
-    <AuthLayout
-      title="Create Account"
-      subtitle="Start exploring featu"
-    >
+    <AuthLayout title="Create Account" subtitle="Start testing">
       <form onSubmit={handleSubmit(onSubmit)} className="mt-0 space-y-4">
         <FormField
           label="Full Name"

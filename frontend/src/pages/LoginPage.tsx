@@ -50,10 +50,7 @@ function LoginPage() {
     }
   };
   return (
-    <AuthLayout
-      title="Welcome Back"
-      subtitle="Sign in to explore more features."
-    >
+    <AuthLayout title="Welcome Back" subtitle="Sign in to continue testing.">
       <form onSubmit={handleSubmit(onSubmit)} className="mt-6 space-y-4">
         <FormField
           label="Email Address"
